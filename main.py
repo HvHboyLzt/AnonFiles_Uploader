@@ -9,7 +9,8 @@ j = 0
 
 while j < s:
 	file = './upload/' + files[j]
-	upload = anon.upload(file, progressbar = True)
+	upload = anon.upload(file, progressbar = False)
+	print(f'Uploaded: {upload.url.geturl()}')
 	j = j + 1
 	result.write(upload.url.geturl() + '\n')
 
